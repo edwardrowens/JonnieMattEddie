@@ -8,7 +8,7 @@ import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
  *
  * @author Matt
  */
-public class ApplicationEntryPoint {
+public class ClientEntryPoint {
 
 	public static void main(String[] args) {
 		// Configurations

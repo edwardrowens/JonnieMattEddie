@@ -21,4 +21,5 @@
   	</dependency>
   </dependencies>
   <name>Project Mages - Core</name>
+  <packaging>pom</packaging>
 </project>
