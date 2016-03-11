@@ -3,6 +3,11 @@ package jonniematteddie.mages.client;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 
+/**
+ * The game client for mages
+ *
+ * @author Matt
+ */
 public class MagesClient implements ApplicationListener {
 
 	@Override
