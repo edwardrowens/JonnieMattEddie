@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="test"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/mages-core"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
@@ -12,14 +11,6 @@
 	<classpathentry kind="lib" path="/mages-core/lib/gdx-backend-lwjgl.jar" sourcepath="/mages-core/lib/sources/gdx-backend-lwjgl-sources.jar"/>
 	<classpathentry kind="lib" path="/mages-core/lib/gdx-natives.jar"/>
 	<classpathentry kind="lib" path="/mages-core/lib/gdx.jar" sourcepath="/mages-core/lib/sources/gdx-sources.jar"/>
-	<classpathentry kind="src" path="target/generated-sources/annotations">
-		<attributes>
-			<attribute name="ignore_optional_problems" value="true"/>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="m2e-apt" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
