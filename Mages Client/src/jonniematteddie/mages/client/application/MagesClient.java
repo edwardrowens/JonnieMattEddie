@@ -1,17 +1,28 @@
-package jonniematteddie.mages.client;
+package jonniematteddie.mages.client.application;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 
 /**
- * The game client for mages
+ * The game client for Mages
  *
  * @author Matt
  */
 public class MagesClient implements ApplicationListener {
 
+	/**
+	 * THE Injector
+	 */
+	private static Injector injector;
+
 	@Override
 	public void create() {
+		// Set up the injector
+		injector = Guice.createInjector(new ClientModule());
+
+		// Bind the input processor
 		Gdx.input.setInputProcessor(new ClientInputProcessor());
 	}
 
@@ -43,5 +54,13 @@ public class MagesClient implements ApplicationListener {
 	@Override
 	public void dispose() {
 		// TODO Auto-generated method stub
+	}
+
+
+	/**
+	 * @return THE Injector
+	 */
+	public static Injector getInjector() {
+		return injector;
 	}
 }

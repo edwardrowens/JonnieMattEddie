@@ -1,4 +1,4 @@
-package jonniematteddie.mages.client;
+package jonniematteddie.mages.client.application;
 
 import com.badlogic.gdx.InputProcessor;
 
