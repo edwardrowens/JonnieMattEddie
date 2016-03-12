@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.objenesis.strategy.StdInstantiatorStrategy;
 
+import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
 import com.esotericsoftware.kryonet.Server;
@@ -49,7 +50,7 @@ public class MagesServer {
 	public void start() throws IOException {
 		server.start();
 		server.bind(tcpPort, udpPort);
-		server.getKryo().setInstantiatorStrategy(new StdInstantiatorStrategy());
+		((Kryo.DefaultInstantiatorStrategy) server.getKryo().getInstantiatorStrategy()).setFallbackInstantiatorStrategy(new StdInstantiatorStrategy());
 
 		for (Class<?> c : NetworkingUtils.getClassesToRegister()) {
 			server.getKryo().register(c);
